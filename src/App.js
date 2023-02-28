@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+// import Navbar from './components/Navbar';
+// import Textbox from './components/Textbox';
 
+// function App() {
+ 
+//   return (
+//     <>
+      
+//     <Navbar title= "KL University" aboutText="Aboutus"/>
+//    <div className="container">
+   
+//    <Textbox heading="Enter text here to analyze:"/> 
+//    </div>
+//    <div className ="container my-4" >
+   
+
+//     <button className = "btn btn-primary"  >Convert to Uppercase</button>
+//    </div>
+   
+//     </>
+//   );
+// }
+// export default App;
+
+// import logo from './logo.svg';
+import './App.css';
+import AboutUs from './components/AboutUs';
+import Navbar from './components/Navbar';
+import Textbox from './components/Textbox';
+import {Routes,Route} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar title="KL University" aboutText="Aboutus" />
+    <Routes>
+      <Route path="/" element={<Textbox heading="Enter text here to analyze:" />} />
+      <Route path="/about" element={<AboutUs />} />
+    </Routes>
+  </>
   );
 }
 
